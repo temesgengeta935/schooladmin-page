@@ -1,0 +1,349 @@
+/* Login Styles - Reduced Size */
+.login-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+  padding: 12px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.login-wrapper {
+  width: 100%;
+  max-width: 360px; /* reduced from 420px */
+  animation: fadeIn 0.45s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Brand Section */
+.brand {
+  text-align: center;
+  margin-bottom: 24px;
+  color: white;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.icon {
+  font-size: 2rem; /* reduced */
+  background: rgba(255, 255, 255, 0.18);
+  padding: 10px; /* reduced */
+  border-radius: 50%;
+  backdrop-filter: blur(8px);
+}
+
+.title {
+  font-size: 1.6rem; /* reduced */
+  font-weight: 700;
+  margin: 0;
+  letter-spacing: 0.4px;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.18);
+}
+
+.subtitle {
+  font-size: 0.92rem;
+  opacity: 0.9;
+  margin: 0;
+  font-weight: 300;
+  letter-spacing: 0.4px;
+}
+
+/* Login Card */
+.login-card {
+  background: white;
+  border-radius: 12px; /* reduced */
+  padding: 24px; /* reduced */
+  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.25);
+}
+
+.card-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.card-header h2 {
+  font-size: 1.4rem; /* reduced */
+  color: #333;
+  margin: 0 0 6px 0;
+  font-weight: 600;
+}
+
+.card-header p {
+  color: #666;
+  font-size: 0.9rem;
+  margin: 0;
+  font-weight: 400;
+}
+
+/* Form Styles */
+.login-form {
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 16px; /* reduced */
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 6px;
+  color: #333;
+  font-size: 0.9rem; /* reduced */
+  font-weight: 500;
+}
+
+.input {
+  width: 100%;
+  padding: 10px 12px; /* reduced */
+  border: 2px solid #e0e0e0;
+  border-radius: 8px; /* reduced */
+  font-size: 0.95rem; /* slightly reduced */
+  color: #333;
+  transition: all 0.2s;
+  background: #fafafa;
+  box-sizing: border-box;
+}
+
+.input:focus {
+  outline: none;
+  border-color: #1a237e;
+  background: white;
+  box-shadow: 0 0 0 3px rgba(26, 35, 126, 0.08);
+}
+
+.input::placeholder {
+  color: #999;
+}
+
+/* Form Options */
+.form-options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 18px; /* reduced */
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  font-size: 0.85rem; /* reduced */
+  color: #555;
+  user-select: none;
+}
+
+.checkbox {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkmark {
+  position: relative;
+  height: 16px; /* reduced */
+  width: 16px; /* reduced */
+  background-color: #f0f0f0;
+  border: 2px solid #ddd;
+  border-radius: 4px;
+  transition: all 0.15s;
+}
+
+.checkbox-label:hover .checkmark {
+  background-color: #e8e8e8;
+}
+
+.checkbox:checked ~ .checkmark {
+  background-color: #1a237e;
+  border-color: #1a237e;
+}
+
+.checkbox:checked ~ .checkmark::after {
+  content: '';
+  position: absolute;
+  left: 4px;
+  top: 1px;
+  width: 4px;
+  height: 8px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+.forgot-link {
+  background: none;
+  border: none;
+  color: #1a237e;
+  font-size: 0.85rem; /* reduced */
+  font-weight: 500;
+  cursor: pointer;
+  padding: 4px 0;
+  text-decoration: none;
+  transition: color 0.15s;
+}
+
+.forgot-link:hover {
+  color: #283593;
+  text-decoration: underline;
+}
+
+/* Button */
+.btn {
+  width: 100%;
+  padding: 12px; /* reduced */
+  border: none;
+  border-radius: 8px; /* reduced */
+  font-size: 0.95rem; /* reduced */
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #1a237e 0%, #283593 100%);
+  color: white;
+}
+
+.btn-primary:hover:not(:disabled) {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 18px rgba(26, 35, 126, 0.32);
+}
+
+.btn-primary:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Alert */
+.alert {
+  padding: 10px 12px; /* reduced */
+  border-radius: 8px; /* reduced */
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  animation: slideInDown 0.25s ease-out;
+}
+
+@keyframes slideInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.alert-error {
+  background: #fff5f5;
+  color: #e74c3c;
+  border: 1px solid #fadbd8;
+}
+
+.alert-icon {
+  font-size: 1rem; /* reduced */
+}
+
+/* Footer */
+.login-footer {
+  text-align: center;
+  padding-top: 14px; /* reduced */
+  border-top: 1px solid #eee;
+}
+
+.footer-text {
+  font-size: 0.75rem; /* reduced */
+  color: #888;
+  margin: 0 0 8px 0;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.footer-link {
+  font-size: 0.75rem; /* reduced */
+  color: #1a237e;
+  text-decoration: none;
+  transition: color 0.15s;
+}
+
+.footer-link:hover {
+  color: #283593;
+  text-decoration: underline;
+}
+
+.separator {
+  color: #ccc;
+  font-size: 0.75rem;
+}
+
+/* Spinner */
+.spinner {
+  width: 12px; /* reduced */
+  height: 12px; /* reduced */
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top-color: white;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+  .login-container {
+    padding: 10px;
+  }
+
+  .login-card {
+    padding: 20px;
+  }
+
+  .title {
+    font-size: 1.4rem;
+  }
+
+  .form-options {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .forgot-link {
+    align-self: flex-start;
+  }
+}
